@@ -1,4 +1,3 @@
-// Import necessary components and functions from react-router-dom.
 
 import {
     createBrowserRouter,
@@ -6,25 +5,29 @@ import {
     Route,
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
+import { DetailPlanets } from "./pages/Detail.Planets";
+import { People } from "./pages/People";
+//import { Single } from "./pages/Single";
+//import { Demo } from "./pages/Demo";
 import { Home } from "./pages/Home";
-import { Single } from "./pages/Single";
-import { Demo } from "./pages/Demo";
+import { Planets } from "./pages/Planets";
+import { Starships } from "./pages/ StarShips";
+import { DetailPerson } from "./pages/DetailPerson";
+import { DetailStarShip } from "./pages/DetailStarShips";
+import { Favoritos } from "./pages/Favoritos";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
-    // CreateRoutesFromElements function allows you to build route elements declaratively.
-    // Create your routes here, if you want to keep the Navbar and Footer in all views, add your new routes inside the containing Route.
-    // Root, on the contrary, create a sister Route, if you have doubts, try it!
-    // Note: keep in mind that errorElement will be the default page when you don't get a route, customize that page to make your project more attractive.
-    // Note: The child paths of the Layout element replace the Outlet component with the elements contained in the "element" attribute of these child paths.
 
-      // Root Route: All navigation will start from here.
-      <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>} >
-
-        {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
-        <Route path= "/" element={<Home />} />
-        <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
-        <Route path="/demo" element={<Demo />} />
-      </Route>
+    <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/people" element={<People />} />
+      <Route path="/planets" element={<Planets />} />
+      <Route path="/starships" element={<Starships />} />
+      <Route path="/planet/:id" element={<DetailPlanets/>}/>
+      <Route path="/person/:id" element={<DetailPerson/>}/>
+      <Route path="/starship/:id" element={<DetailStarShip/>}/>
+      <Route path="/favoritos" element={<Favoritos />} />
+    </Route>
     )
 );
