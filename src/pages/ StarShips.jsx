@@ -44,6 +44,7 @@ return (
               navi={`/starship/${starship.uid}`}
               favoritos={true}
               item= {starship}
+              link={`/starship/${starship.uid}`}
             />
           </div>
         ))}

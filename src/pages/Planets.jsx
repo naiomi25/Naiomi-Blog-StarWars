@@ -48,7 +48,8 @@ export const Planets = () => {
                     navi={`/planet/${planet.uid}`}
                     showButtonMoreInfo={true}
                     favoritos={true}
-                  item= {planet}
+                    item= {planet}
+                    link={`/planet/${planet.uid}`}
                   />
                 </div>
               ))}

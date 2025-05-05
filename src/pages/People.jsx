@@ -45,8 +45,9 @@ export const People = () => {
                   showButtonMoreInfo={true}
                   navi={(`/person/${person.uid}`)}
                   favoritos={true}
-                  link={`/person/${person.uid}`}
-                  image={ 'https://images.reporteindigo.com/wp-content/uploads/2023/04/personajes-star-wars.jpg' }
+                  item={person}
+                  link={(`/person/${person.uid}`)}
+                  
                 />
               </div>
             ))}

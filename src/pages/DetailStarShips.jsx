@@ -32,7 +32,7 @@ return(
     <div className="container d-flex justify-content-center">
         <Card
         names = {store.starship?.name}
-        imagen={'https://www.ecestaticos.com/imagestatic/clipping/49f/c0c/49fc0cc538c946f685014487ba2c4478/las-naves-espaciales-mas-temibles-que-han-surcado-la-galaxia-en-la-saga-de-star-wars.jpg?mtime=1622853097'}
+        imagen ={'https://www.ecestaticos.com/imagestatic/clipping/49f/c0c/49fc0cc538c946f685014487ba2c4478/las-naves-espaciales-mas-temibles-que-han-surcado-la-galaxia-en-la-saga-de-star-wars.jpg?mtime=1622853097'}
         showButtonBack={true}
         naviback={"/starships"}
         loading = {loading}

@@ -5,8 +5,8 @@ import botonVolverurl from "../assets/img/volverAtras.png";
 import storeReducer from "../store";
 import useGlobalReducer from "../hooks/useGlobalReducer";
 
-export const Card = ({ names, navi, children, image, loading = false, texto,
-   naviback, showButtonMoreInfo, showButtonBack, favoritos,link}) => {
+export const Card = ({ names, navi, children, imagen, loading = false, texto,
+   naviback, showButtonMoreInfo, showButtonBack ,favoritos,link,item}) => {
   
   const navigate = useNavigate()
   const {dispatch,store} = useGlobalReducer()
@@ -16,9 +16,9 @@ export const Card = ({ names, navi, children, image, loading = false, texto,
 
     const handlefavoritos = () => {
 
-    contenedorFavoritos ? (dispatch({ type: 'delete-favorite', payload: {name} })
+    contenedorFavoritos ? (dispatch({ type: 'delete-favorite', payload: {name :names} })
     ) : (
-      dispatch({ type: 'add-favorite',payload:{ names,link,image}}))
+      dispatch({ type: 'add-favorite',payload:{name : names ,link, image :imagen}}))
 
 
   }
@@ -35,7 +35,7 @@ export const Card = ({ names, navi, children, image, loading = false, texto,
         </button>
       ) : (
         <div className="card" style={{ width: "18rem" }}>
-          <img src={image} className="card-img-top" alt={`imagen de ${names}`} />
+          <img src={imagen} className="card-img-top imagenCard" alt={`imagen de ${names}`} />
           <div className="card-body">
             <h5 className="card-title">{names}</h5>
 
