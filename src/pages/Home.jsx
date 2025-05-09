@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export const Home = () => {
+
+  
   return (
     <div className="container text-center mt-1 home">
       <h1 className="texto">Bienvenid@ al universo Star Wars</h1>
