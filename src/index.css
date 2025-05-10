@@ -10,8 +10,25 @@ body::before{
    
     
 }
+.navbarHome,
+.navbarHome2 {
+  width: 120px;
+  height: 120px;
+}
 
 
+@media (max-width: 576px) {
+  .navbarHome,
+  .navbarHome2 {
+    width: 60px;
+    height: 60px;
+  }
+}
+.navbarHome2 {
+    margin-top: 37px;
+}
+
+/* 
 .navbarHome{
     width: 100px;
     height: 100px;
@@ -27,14 +44,12 @@ body::before{
     border-bottom: 30px;
     margin-top: 20px;
    
-    
-    
 
-}
+} */
 
-.contenedorImagenesHome{
+/* .contenedorImagenesHome{
     flex-direction: column;
-}
+} */
 
 .imagenHome{
 width: 250px;
@@ -43,7 +58,7 @@ border-radius: 20px;
 box-shadow: 5px 5px 5px rgb(36, 36, 36);
 }
 .linksHome{
-    gap: 180px;
+   width: 157px;
 }
 .texto{
     font-family: 'Russo One', sans-serif;

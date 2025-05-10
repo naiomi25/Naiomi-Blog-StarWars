@@ -7,9 +7,9 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light ">
 			
-			<div className="container">
+			<div className="container d-flex justify-content-between align-items-center">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1 "> <img className= 'navbarHome' src={baseEstelarUrl} alt="Base estelar"/></span>
+					<span className="navbar-brand mb-0 h1 "> <img className= 'navbarHome ' src={baseEstelarUrl} alt="Base estelar"/></span>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/favoritos">
